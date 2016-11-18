@@ -23,4 +23,3 @@ composer.json
 !package.json
 server.log
 !node_modules.log
-fis3-demo/
