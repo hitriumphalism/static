@@ -86,6 +86,12 @@ fis
 .match('/src/common/component/**/*.{html,tpl,tmpl}', {
     release: false
 })
+.match('/src/common/component/**', {
+      useSameNameRequire: true
+})
+.match('/src/page/*/component/**', {
+      useSameNameRequire: true
+})
 .match('/test/**/*',{
     release:false,
 })
