@@ -1,1 +1,1 @@
-sudo fis3 server clean
+sudo rm -r /vagrant/debug/.fis3-tmp/www/
