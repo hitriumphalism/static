@@ -107,6 +107,15 @@
         </div>
     </div>
 </div>
+<div id="hbs">
+
+</div>
 <script>
-    require('./grid.js').bind(console)('require success!!');
+    // requre('')
+    document.querySelector('.page').innerHTML+=require('./grid.js')({
+        data:[
+            6,
+            6
+        ]
+    })
 </script>
