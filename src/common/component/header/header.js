@@ -1,0 +1,1 @@
+console.info('async common component:header');
