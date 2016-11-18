@@ -14,7 +14,7 @@ Homestead.json
 .git/
 .svn/
 Vagrantfile
-.vagrant/
+.vagrantfile/
 artisan
 !gulpfile.js
 *.xml
