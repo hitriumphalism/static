@@ -49,5 +49,9 @@ artisan
 composer.json
 !package.json
 server.log
+<<<<<<< HEAD
+!node_modules.log
+>>>>>>> no-tpl
+=======
 !node_modules.log
 >>>>>>> no-tpl
