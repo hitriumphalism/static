@@ -81,6 +81,14 @@ fis
 ])
 
 //<对异构语言的编译>
+
+.match('/src/**/*.handlebars', {
+    rExt: '.js', // from .handlebars to .js 虽然源文件不需要编译，但是还是要转换为 .js 后缀
+    parser: fis.plugin('handlebars-3.x', {
+        //fis-parser-handlebars-3.x option
+    }),
+    release: false // handlebars 源文件不需要编译
+})
 .match('/src/**/*.scss', {
     rExt: '.css',
     parser: fis.plugin('node-sass', {})
@@ -89,6 +97,8 @@ fis
   parser: fis.plugin('typescript'),
   rExt: '.js'
 })
+// .set('modules.parser.handlebars', 'handlebars-3.x')
+// .set('project.fileType.text', 'hbs')
 // .match('/src/common/component/**/*', {
 //     // isMod: true
 // })
