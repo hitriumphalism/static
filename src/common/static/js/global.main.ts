@@ -1,8 +1,3 @@
-! function($, _, echo, Swiper) {
-    echo.init({
-        offset: 100,
-        throttle: 250,
-        unload: false,
-        callback: function(element, op) {}
-    });
-}($, _, echo, Swiper);
+import "../../../config/global.conf.ts";
+import "../css/global.main.scss";
+require("./lib/zepto.js");

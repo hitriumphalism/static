@@ -129,6 +129,12 @@ fis
     moduleId:'$1',
     extList: ['.js', '.coffee', '.jsx','ts','es6'],
 })
+.match('/src/(config/*.{js,ts,jsx,est,coffee})', {
+    // release:'/static/$1',
+    isMod:true,
+    moduleId:'$1',
+    extList: ['.js', '.coffee', '.jsx','ts','es6'],
+})
 .match('/src/page/(**/*.html)', {
     release: '/view/$1',
 })
@@ -137,6 +143,18 @@ fis
 })
 .match('/src/common/static/(**)', {
     release: '/static/common/static/$1',
+    isMod:true,
+    moduleId:'$1',
+    extList: ['.js', '.coffee', '.jsx','ts','es6'],
+})
+.match('/src/common/static/js/lib/(**)', {
+    // release: '/static/common/static/$1',
+    isMod:false,
+    // moduleId:'$1',
+    // extList: ['.js', '.coffee', '.jsx','ts','es6'],
+})
+.match('/src/common/component/(**/*.{css,sass,scss,ts,jsx,js})', {
+    release: '/static/common/component/$1',
     isMod:true,
     moduleId:'$1',
     extList: ['.js', '.coffee', '.jsx','ts','es6'],
@@ -158,6 +176,12 @@ fis
 })
 .match('/src/common/component/**/*', {
       useSameNameRequire: true
+})
+.match('/src/page/(**/config/*.{js,ts,jsx,est,coffee})', {
+    release:'/static/$1',
+    isMod:true,
+    moduleId:'$1',
+    extList: ['.js', '.coffee', '.jsx','ts','es6'],
 })
 .match('*', {
     deploy: [

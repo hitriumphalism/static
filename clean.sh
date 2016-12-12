@@ -1,1 +1,1 @@
-sudo rm -r /vagrant/debug/.fis3-tmp/www/
+sudo rm -rf /vagrant/.debug/.fis3-tmp/www/**
