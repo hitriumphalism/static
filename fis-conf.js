@@ -163,7 +163,7 @@ fis
     deploy: [
         fis.plugin('skip-packed', {}),
         fis.plugin('local-deliver', {
-            to: '/vagrant/debug/.fis3-tmp/www'
+            to: '/vagrant/.debug/.fis3-tmp/www'
         })
     ]
 })
