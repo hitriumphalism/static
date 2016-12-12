@@ -1,3 +1,4 @@
+import "../static/css/local.main.scss";
 const __local={
     CONF:{}
 };
