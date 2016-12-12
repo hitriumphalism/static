@@ -1,3 +1,5 @@
+import "../../config/local.conf.ts";
+import "../../../../common/static/js/global.main.ts";
 $.ajax({
     url:'/api/dynamic',
     type:'get',
