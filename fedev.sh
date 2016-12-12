@@ -1,1 +1,1 @@
-sudo fis3 release fedev -cw
+sudo fis3 release fedev -wc
