@@ -147,11 +147,11 @@ fis
     moduleId:'$1',
     extList: ['.js', '.coffee', '.jsx','ts','es6'],
 })
-.match('/src/common/static/js/lib/(**)', {
-    // release: '/static/common/static/$1',
+.match('/src/common/static/js/**/*', {
     isMod:false,
-    // moduleId:'$1',
-    // extList: ['.js', '.coffee', '.jsx','ts','es6'],
+})
+.match('/src/common/static/js/module/**', {
+    isMod:true,
 })
 .match('/src/common/component/(**/*.{css,sass,scss,ts,jsx,js})', {
     release: '/static/common/component/$1',
