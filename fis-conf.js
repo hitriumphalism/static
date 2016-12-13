@@ -129,6 +129,9 @@ fis
     moduleId:'$1',
     extList: ['.js', '.coffee', '.jsx','ts','es6'],
 })
+.match('/src/page/(*/static/js/local.main.{js,ts,jsx,est,coffee})', {
+    isMod:true,
+})
 .match('/src/(config/*.{js,ts,jsx,est,coffee})', {
     // release:'/static/$1',
     isMod:true,
