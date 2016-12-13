@@ -1,5 +1,8 @@
 import "../../config/local.conf.ts";
 import "../../../../common/static/js/global.main.ts";
+require("../../../../common/static/css/layout/h5.scss");
+require("../../../../common/static/css/motion/animate.scss");
+require("../../../../common/static/css/block/swiper.scss");
 $.ajax({
     url:'/api/dynamic',
     type:'get',

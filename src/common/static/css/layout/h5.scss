@@ -1,0 +1,8 @@
+@import "../config/config";
+html.desktop{
+    font-size:100px;
+    .page{
+         width:$desktop-width;
+         margin: auto;
+    }
+}
