@@ -1,8 +1,20 @@
 @import "../config/config";
-html.desktop{
-    font-size:100px;
+html{
+    width:100%;
+    height:100%;
+    &[data-layout="h5"].desktop{
+        font-size:100px;
+        .page{
+            width:$desktop-width;
+        }
+    }
+    body{
+        width:100%;
+        height:100%;
+    }
     .page{
-         width:$desktop-width;
-         margin: auto;
+        margin: auto;
+        height:100%;
+        overflow: hidden;
     }
 }

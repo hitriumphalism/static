@@ -1,0 +1,85 @@
+@import "../../../../common/static/css/function/_mixin";
+
+.swiper-world{
+    width:100%;
+    height:100%;
+    background-color:#000;
+
+    .h5-background{
+        width:100%;
+        height:100%;
+        &__img{
+            width:100%;
+            height:auto;
+        }
+
+        @extend %pa;
+        @extend %oh;
+    }
+    .h5-element{
+        width:100%;
+        height:100%;
+        &__img{
+            height:auto;
+        }
+
+        @extend %pa;
+        @extend %oh;
+    }
+    .page1{
+        &-logo{
+            width:1.91rem;
+            height:0.92rem;
+            top:0;
+            left:5.07rem;
+            @extend %pa;
+        }
+    }
+    .page3{
+        .arrowleft{
+            @extend %pa;
+            width:0.71rem;
+            height:0.98rem;
+            bottom:3.9rem;
+        }
+        .arrowright{
+            @extend %pa;
+            width:0.75rem;
+            height:0.97rem;
+            left:6.68rem;
+            bottom:3.9rem;
+        }
+        .fl{
+            width: 5.81rem;
+            left:.82rem;
+            bottom:1.91rem;
+            margin: 0;
+            @extend %pa;
+        }
+    }
+    .page4{
+        &__car{
+            bottom: 0;
+            width:100%;
+            @extend %pa;
+        }
+        &__text{
+            bottom: 1.52rem;
+            width:100%;
+            @extend %pa;
+        }
+    }
+    .page5{
+        &__title{
+            top:0 ;
+            width:100%;
+            @extend %pa;
+        }
+        &__form{
+            top: 2.15rem;
+            left:.56rem;
+            width:6.46rem;
+            @extend %pa;
+        }
+    }
+}

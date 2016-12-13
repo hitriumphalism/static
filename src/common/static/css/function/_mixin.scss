@@ -8,3 +8,19 @@
         clear: both;
     }
 }
+
+%pa{
+    position: absolute;
+    left:0;
+    right:0;
+}
+
+%pr{
+    position: relative;
+    left:0;
+    right:0;
+}
+
+%oh{
+    overflow: hidden;
+}
