@@ -74,6 +74,13 @@ fis
 /**
  * <前端环境配置>
  */
+// 启用插件 
+.hook('relative')
+ 
+// 让所有文件，都使用相对路径。 
+.match('**', {
+  relative: true
+})
 
 .media('fedev')
 .set('project.ignore',[
@@ -98,7 +105,6 @@ fis
 //     // })
 // })
 //</对异购语言的编译>
-
 
 
 //<预览规范>
@@ -195,3 +201,4 @@ fis
     ]
 })
 //</预览规范>
+.media('build');

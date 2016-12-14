@@ -1,3 +1,6 @@
+<style>
+    .test{background:red;}
+</style>
 <div class="page5">
     <div class="h5-background">
         <img class="h5-background__img" src="./page5.png">
@@ -11,13 +14,13 @@
                         <label class="form-text" for="">
                             姓名
                         </label>
-                        <input type="text">
+                        <input id="nameID" type="text" name="" value="" placeholder="请填写您的姓名">
                     </li>
                     <li>
                         <label class="form-text" for="">
                             手机号
                         </label>
-                        <input type="text">
+                        <input id="phoneID" type="text" name="" value="" placeholder="请填写您的手机号">
                     </li>
                     <li>
                         <label class="form-text" for="">
@@ -59,3 +62,79 @@
         </div>
     </div>
 </div>
+<script>    
+    $('.js-page5_form-submit').on('tap', function() {
+        formValidate();
+    });
+    //验证函数
+    function formValidate(){
+        var $name = $('#nameID'),
+            $phone = $('#phoneID'),
+            $form_city = $('#form_city'),
+            $form_saler = $('#form_saler'),
+            nameVal = $name.val(),
+            phoneVal = $phone.val();
+        var form_cityVal = $form_city.val(),
+            form_salerVal = $form_saler.val();
+        //判断购车人
+        if($name.val().length == 0){
+            alert('请输入姓名!')
+            return false;
+        }
+        //判断手机号
+        if(phoneVal.length == 0){
+            
+            alert('请输入手机号!');
+            return false;
+        }else{
+            if(isPhone(phoneVal) == false){
+                 alert('请输入手机号!');
+                return false;
+            }
+        }
+        //经销商
+        if(form_salerVal.length == 0||form_salerVal == '请选择意向车型！'){
+            alert('请选择意向车型');
+            return false;
+        }
+        addApply(nameVal,phoneVal,null,form_cityVal,form_salerVal)
+    }
+    //验证手机号
+    function isPhone(phone){
+        var pattern = /^1[3|4|5|7|8]\d{9}$/;
+        return pattern.test(phone);
+    }
+    function addApply(nameVal,phoneVal,provVal,cityVal,salerVal){
+        var utmid = $.fn.cookie('utmid');
+        $.ajax({
+            type: 'POST',
+            url: '/manage/addapply',
+            dataType: 'json',
+            data: {
+                zt_name:"宝沃专题H5",
+                zt_id:"171",
+                name:nameVal,
+                phone:phoneVal,
+                address:cityVal,
+                comment:salerVal,
+                utmid:utmid,
+                sms:'smssent',
+                phone_unique:1,
+                exhibition_date:''
+            },
+            success: function(response){
+              if(response.submitStatus==0){
+                    ga('send','event','baowo_wap','baoming',phoneVal);
+                    alert('您的报名信息已成功提交，请耐心等待客服回访！', '提示');
+              }else if(response.submitStatus == -12){
+                    alert('该手机号已经报名成功，不可再次报名');
+              }else{
+                    alert('提交失败！请检查你的操作是否正确或网络是否存在故障！');
+              }
+            },
+            error:function() {
+                alert('抱歉，网络繁忙，请重试！');
+            }
+        });
+    }
+</script>

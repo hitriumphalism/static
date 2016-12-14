@@ -46,23 +46,22 @@
                 width:100%;
                 height:auto;
             }
-            overflow: visible;
+            // overflow: visible;
+        }
 
             
-            .arrowleft{
-                @extend %pa;
-                width:0.71rem;
-                height:0.98rem;
-                bottom:1.9rem;
-                left:-0.77rem;
-            }
-            .arrowright{
-                @extend %pa;
-                width:0.75rem;
-                height:0.97rem;
-                left:5.87rem;
-                bottom:1.9rem;
-            }
+        .arrowleft{
+            @extend %pa;
+            width:0.71rem;
+            height:0.98rem;
+            bottom:3.8rem;
+        }
+        .arrowright{
+            @extend %pa;
+            width:0.75rem;
+            height:0.97rem;
+            left:6.67rem;
+            bottom:3.8rem;
         }
     }
     .page4{
