@@ -1,35 +1,61 @@
-<div class="h5-background">
-    <img class="h5-background__img" src="./page5.png">
-</div>
-<div class="h5-element">
-    <img class="page5__title" src="./title.png" alt="title">
-    <form class="js-page5__form page5__form">
-        <ul>
-            <li>
-                <label for="">
-                    姓名
-                </label>
-                <input type="text">
-            </li>
-            <li>
-                <label for="">
-                    手机号
-                </label>
-                <input type="text">
-            </li>
-            <li>
-                <label for="">
-                    意向车型
-                </label>
-                <input type="text">
-            </li>
-            <li>
-                <label for="">
-                    城市
-                </label>
-                <input type="text">
-            </li>
-        </ul>
-        <div class="js-page5_form-submit"></div>
-    </form>
+<div class="page5">
+    <div class="h5-background">
+        <img class="h5-background__img" src="./page5.png">
+    </div>
+    <div class="h5-element">
+        <img class="page5__title" src="./title.png" alt="title">
+        <div>
+            <form class="js-page5__form page5__form">
+                <ul>
+                    <li>
+                        <label class="form-text" for="">
+                            姓名
+                        </label>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <label class="form-text" for="">
+                            手机号
+                        </label>
+                        <input type="text">
+                    </li>
+                    <li>
+                        <label class="form-text" for="">
+                            意向车型
+                        </label>
+                        <select class="saler2" id="form_saler" name="form_saler">
+                            <option>BX7 5座二驱精英</option>
+                            <option>BX7 5座二驱豪华</option>
+                            <option>BX7 5座四驱精英</option>
+                            <option>BX7 5座四驱豪华</option>
+                            <option>BX7 5座四驱旗舰</option>
+                            <option>BX7 6座两驱</option>
+                            <option>BX7 6座四驱</option>
+                            <option>BX7 7座两驱</option>
+                            <option>BX7 7座四驱</option>
+                        </select>
+                    </li>
+                    <li>
+                        <label class="form-text" for="">
+                            城市
+                        </label>
+                        <select class="city" id="form_city" name="form_city">
+                            <option>石家庄</option>
+                            <option>唐山</option>
+                            <option>保定</option>
+                            <option>邢台</option>
+                            <option>沧州</option>
+                            <option>衡水</option>
+                            <option>天津</option>
+                            <option>北京</option>
+                        </select>
+                    </li>
+                </ul>
+                <div class="js-page5_form-submit page5_form-submit">
+                    <span>提交</span>
+                </div>
+                <div class="text-c"><img src="./text.png" alt="文字"></div>
+            </form>
+        </div>
+    </div>
 </div>

@@ -32,6 +32,8 @@ var swiper2 = new Swiper('.js-fl', {
     lazyLoading: true,
     lazyLoadingInPrevNext: true,
     lazyLoadingInPrevNextAmount: 2,
+    prevButton:'.arrowleft',
+    nextButton:'.arrowright',
     // cube: {
     //     shadow: true,
     //     slideShadows: true,

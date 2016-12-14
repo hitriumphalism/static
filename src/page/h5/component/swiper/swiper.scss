@@ -36,25 +36,33 @@
         }
     }
     .page3{
-        .arrowleft{
-            @extend %pa;
-            width:0.71rem;
-            height:0.98rem;
-            bottom:3.9rem;
-        }
-        .arrowright{
-            @extend %pa;
-            width:0.75rem;
-            height:0.97rem;
-            left:6.68rem;
-            bottom:3.9rem;
-        }
         .fl{
             width: 5.81rem;
             left:.82rem;
             bottom:1.91rem;
             margin: 0;
             @extend %pa;
+            .swiper-slide img{
+                width:100%;
+                height:auto;
+            }
+            overflow: visible;
+
+            
+            .arrowleft{
+                @extend %pa;
+                width:0.71rem;
+                height:0.98rem;
+                bottom:1.9rem;
+                left:-0.77rem;
+            }
+            .arrowright{
+                @extend %pa;
+                width:0.75rem;
+                height:0.97rem;
+                left:5.87rem;
+                bottom:1.9rem;
+            }
         }
     }
     .page4{
@@ -78,8 +86,44 @@
         &__form{
             top: 2.15rem;
             left:.56rem;
-            width:6.46rem;
+            width:6.47rem;
+            height:4.85rem;
+            background-color: #ededed;
             @extend %pa;
+            li{
+                height:.67rem;
+                margin-top:.2rem;
+            }
+        }
+        &_form-submit{
+            width:4.27rem;
+            height:.7rem;
+            background-color:#ffc700;
+            margin:.2rem auto;
+            text-align: center;
+            line-height: .7rem;
+            span{
+                font-weight: bold;
+                font-size:.36rem;
+            }
+        }
+        .form-text{
+            font-size: .36rem;
+            color:#000;
+            font-style:italic;
+            font-weight:bold;
+            width:1.82rem;
+            display: inline-block;
+        }
+        input[type="text"],select{
+            width:3.53rem;
+            font-size:.36rem;
+            height:100%;
+            background-color:#a3a3a3;
+            border:0;
+        }
+        .text-c img{
+            width:100%;
         }
     }
 }
